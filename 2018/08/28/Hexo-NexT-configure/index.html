@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo," />
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="添加「标签」页面 在终端窗口下，定位到 Hexo 站点目录下。使用 hexo new page 新建一个页面，命名为 tags ： 12$ cd your-hexo-site$ hexo new page tags  编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下： 1234title: 标签date: 2018-08-27 12:39:04type">
-<meta name="keywords" content="Hexo,HTML,CSS,android,Linux">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+NexT配置摘要">
 <meta property="og:url" content="https://felischaus.com/blog/2018/08/28/Hexo-NexT-configure/index.html">
 <meta property="og:site_name" content="ECHO的薄荷塘">
 <meta property="og:description" content="添加「标签」页面 在终端窗口下，定位到 Hexo 站点目录下。使用 hexo new page 新建一个页面，命名为 tags ： 12$ cd your-hexo-site$ hexo new page tags  编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下： 1234title: 标签date: 2018-08-27 12:39:04type">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-27T09:38:44.000Z">
+<meta property="og:updated_time" content="2018-08-28T06:54:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+NexT配置摘要">
 <meta name="twitter:description" content="添加「标签」页面 在终端窗口下，定位到 Hexo 站点目录下。使用 hexo new page 新建一个页面，命名为 tags ： 12$ cd your-hexo-site$ hexo new page tags  编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下： 1234title: 标签date: 2018-08-27 12:39:04type">
@@ -366,31 +366,63 @@
 
       
         <h3 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h3><ul>
-<li><p>在终端窗口下，定位到 Hexo 站点目录下。使用 hexo new page 新建一个页面，命名为 tags ：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ hexo new<span class="built_in"> page </span>tags</span><br></pre></td></tr></table></figure>
+<li><p>在终端窗口下，定位到 <code>Hexo</code> 站点目录下。使用 <code>hexo new page</code> 新建一个页面，命名为 <code>tags</code> ：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">cd</span> your-hexo-site</span><br><span class="line">$ hexo <span class="keyword">new</span> page <span class="keyword">tags</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-08</span><span class="bullet">-27</span> <span class="number">12</span><span class="string">:39:04</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"tags"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<li><p>编辑刚新建的页面，将页面的类型设置为 <code>tags</code> ，主题将自动为这个页面显示标签云。页面内容如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-08</span><span class="bullet">-27</span> <span class="number">12</span><span class="string">:39:04</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"tags"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在菜单中添加链接。编辑 主题配置文件 ， 添加 tags 到 menu 中，如下:</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">menu</span>:</span><br><span class="line">  home: /</span><br><span class="line">  archive<span class="variable">s:</span> /archives</span><br><span class="line">  <span class="keyword">tag</span><span class="variable">s:</span> /<span class="keyword">tags</span></span><br></pre></td></tr></table></figure>
+<li><p>在菜单中添加链接。编辑 主题配置文件 ， 添加 <code>tags</code> 到 <code>menu</code> 中，如下:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h3><ul>
-<li><p>在终端窗口下，定位到 Hexo 站点目录下。使用 hexo new page 新建一个页面，命名为 categories ：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ hexo new<span class="built_in"> page </span>categories</span><br></pre></td></tr></table></figure>
+<li><p>在终端窗口下，定位到 <code>Hexo</code> 站点目录下。使用 hexo new page 新建一个页面，命名为 <code>categories</code> ：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">cd</span> your-hexo-site</span><br><span class="line">$ hexo <span class="keyword">new</span> page categories</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>编辑刚新建的页面，将页面的 type 设置为 categories ，主题将自动为这个页面显示分类。页面内容如下：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2014</span><span class="bullet">-12</span><span class="bullet">-22</span> <span class="number">12</span><span class="string">:39:04</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"categories"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<li><p>编辑刚新建的页面，将页面的 <code>type</code> 设置为 <code>categories</code> ，主题将自动为这个页面显示分类。页面内容如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2014</span><span class="bullet">-12</span><span class="bullet">-22</span> <span class="number">12</span><span class="string">:39:04</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"categories"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在菜单中添加链接。编辑 主题配置文件 ， 添加 categories 到 menu 中，如下:</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> /</span><br><span class="line"><span class="symbol">  archives:</span> /archives</span><br><span class="line"><span class="symbol">  categories:</span> /categories</span><br></pre></td></tr></table></figure>
+<li><p>在菜单中添加链接。编辑 主题配置文件 ， 添加 <code>categories</code> 到 <code>menu</code> 中，如下:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h3><ul>
-<li>更改 highlight_theme 字段，将其值设定成你所喜爱的高亮主题，例如：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Code Highlight theme</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Available value: normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line">highlight_theme: normal</span><br></pre></td></tr></table></figure>
+<li>更改 <code>highlight_theme</code> 字段，将其值设定成你所喜爱的高亮主题，例如：<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Code Highlight theme</span></span><br><span class="line"><span class="comment"># Available value: normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="comment"># https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line"><span class="attr">highlight_theme:</span> <span class="string">normal</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="代码块高亮"><a href="#代码块高亮" class="headerlink" title="代码块高亮"></a>代码块高亮</h3><p>需要在开头的 ``` 后面添加语言类型，例如：```js  </p>
+<h3 id="文本居中的引用"><a href="#文本居中的引用" class="headerlink" title="文本居中的引用"></a>文本居中的引用</h3><ul>
+<li><h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4></li>
+</ul>
+<ol>
+<li>HTML方式：使用这种方式时，给 <code>img</code> 添加属性 <code>class=&quot;blockquote-center&quot;</code> 即可。</li>
+<li>标签方式：使用 <code>centerquote</code> 或者 简写 <code>cq。</code>  </li>
+</ol>
+<div class="note warning"><p>此标签要求 <code>NexT</code> 的版本在 <code>0.4.5</code> 或以上。 若你正在使用的版本比较低，可以选择使用 <code>HTML</code> 方式。</p></div>
+<ul>
+<li><h4 id="标签调用方法"><a href="#标签调用方法" class="headerlink" title="标签调用方法"></a>标签调用方法</h4><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span><br><span class="line">&lt;!-- 其中 class="blockquote-center" 是必须的 --&gt;</span><br><span class="line">&lt;blockquote class="blockquote-center"&gt;blah blah blah&lt;/blockquote&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</span><br><span class="line">&#123;% centerquote %&#125;blah blah blah&#123;% endcenterquote %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- 标签别名 --&gt;</span><br><span class="line">&#123;% cq %&#125; blah blah blah &#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Bootstrap-Callout"><a href="#Bootstrap-Callout" class="headerlink" title="Bootstrap Callout"></a>Bootstrap Callout</h3><ul>
+<li><h4 id="使用方式-1"><a href="#使用方式-1" class="headerlink" title="使用方式"></a>使用方式</h4><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note class_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其中，class_name 可以是以下列表中的一个值：</p>
+<ul>
+<li>default</li>
+<li>primary</li>
+<li>success</li>
+<li>info</li>
+<li>warning</li>
+<li>danger</li>
+</ul>
+<h3 id="hexo博客图片问题"><a href="#hexo博客图片问题" class="headerlink" title="hexo博客图片问题"></a>hexo博客图片问题</h3><ol>
+<li>首先确认 <code>\_config.yml</code>  中有 <code>post_asset_folder:true</code>。<br><code>Hexo</code> 提供了一种更方便管理 <code>Asset</code> 的设定： <code>post_asset_folder</code><br>当您设置 <code>post_asset_folder</code> 为 <code>true</code> 参数后，在建立文件时，<code>Hexo</code><br>会自动建立一个与文章同名的文件夹，您可以把与该文章相关的所有资源都放到那个文件夹，如此一来，您便可以更方便的使用资源。</li>
+<li>在 <code>hexo</code> 的目录下执行<code>npm install https://github.com/CodeFalling/hexo-asset-image --save</code>（需要等待一段时间）。</li>
+<li>完成安装后用hexo新建文章的时候会发现 <code>\_posts</code> 目录下面会多出一个和文章名字一样的文件夹。图片就可以放在文件夹下面。<br><em>此方法来自<a href="https://www.jianshu.com/p/c2ba9533088a" target="_blank" rel="noopener">TSimeon的简书</a></em></li>
+</ol>
+<hr>
 <p><em>持续更新中…</em></p>
 
       
@@ -406,6 +438,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" <i class="fa fa-tag"></i> Hexo</a>
+          
+        </div>
       
 
       
@@ -425,6 +463,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/28/markdown/" rel="prev" title="markdown基本语法">
+                markdown基本语法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -507,7 +549,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -518,7 +560,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -529,7 +571,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -562,7 +604,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加「标签」页面"><span class="nav-number">1.</span> <span class="nav-text">添加「标签」页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加「分类」页面"><span class="nav-number">2.</span> <span class="nav-text">添加「分类」页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置代码高亮主题"><span class="nav-number">3.</span> <span class="nav-text">设置代码高亮主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加「标签」页面"><span class="nav-number">1.</span> <span class="nav-text">添加「标签」页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加「分类」页面"><span class="nav-number">2.</span> <span class="nav-text">添加「分类」页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置代码高亮主题"><span class="nav-number">3.</span> <span class="nav-text">设置代码高亮主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块高亮"><span class="nav-number">4.</span> <span class="nav-text">代码块高亮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本居中的引用"><span class="nav-number">5.</span> <span class="nav-text">文本居中的引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用方式"><span class="nav-number">5.1.</span> <span class="nav-text">使用方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签调用方法"><span class="nav-number">5.2.</span> <span class="nav-text">标签调用方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap-Callout"><span class="nav-number">6.</span> <span class="nav-text">Bootstrap Callout</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用方式-1"><span class="nav-number">6.1.</span> <span class="nav-text">使用方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo博客图片问题"><span class="nav-number">7.</span> <span class="nav-text">hexo博客图片问题</span></a></li></ol></div>
             
 
           </div>
