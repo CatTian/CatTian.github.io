@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="JavaScript是一种动态类型语言(dynamically typed language)。   就在刚刚之前对于 String 和 Number 因为 运算符 相互转换这件事还是懵的状态。在读 MDN 文档时突然发现，- 号是直接用于数值计算的:12&apos;12&apos; + 1; // &apos;121&apos; String&apos;12&apos; - 1; // 11 Number 这是因为 String 之间的累加只有 + 号吧">
+<meta name="description" content="JavaScript是一种动态类型语言(dynamically typed language)。   就在刚刚之前对于 String 和 Number 因为 运算符 相互转换这件事还是懵的状态。在读 MDN 文档时突然发现，- 号是直接用于数值计算的:12&apos;12&apos; + 1; // &apos;121&apos; String&apos;12&apos; - 1; // 11 Number">
 <meta name="keywords" content="data type">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据类型的转换(Data type conversion)">
 <meta property="og:url" content="https://felischaus.com/blog/2018/09/11/data-type-conversion/index.html">
 <meta property="og:site_name" content="ECHO的薄荷塘">
-<meta property="og:description" content="JavaScript是一种动态类型语言(dynamically typed language)。   就在刚刚之前对于 String 和 Number 因为 运算符 相互转换这件事还是懵的状态。在读 MDN 文档时突然发现，- 号是直接用于数值计算的:12&apos;12&apos; + 1; // &apos;121&apos; String&apos;12&apos; - 1; // 11 Number 这是因为 String 之间的累加只有 + 号吧">
+<meta property="og:description" content="JavaScript是一种动态类型语言(dynamically typed language)。   就在刚刚之前对于 String 和 Number 因为 运算符 相互转换这件事还是懵的状态。在读 MDN 文档时突然发现，- 号是直接用于数值计算的:12&apos;12&apos; + 1; // &apos;121&apos; String&apos;12&apos; - 1; // 11 Number">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-12T02:38:42.000Z">
+<meta property="og:updated_time" content="2018-09-13T01:38:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据类型的转换(Data type conversion)">
-<meta name="twitter:description" content="JavaScript是一种动态类型语言(dynamically typed language)。   就在刚刚之前对于 String 和 Number 因为 运算符 相互转换这件事还是懵的状态。在读 MDN 文档时突然发现，- 号是直接用于数值计算的:12&apos;12&apos; + 1; // &apos;121&apos; String&apos;12&apos; - 1; // 11 Number 这是因为 String 之间的累加只有 + 号吧">
+<meta name="twitter:description" content="JavaScript是一种动态类型语言(dynamically typed language)。   就在刚刚之前对于 String 和 Number 因为 运算符 相互转换这件事还是懵的状态。在读 MDN 文档时突然发现，- 号是直接用于数值计算的:12&apos;12&apos; + 1; // &apos;121&apos; String&apos;12&apos; - 1; // 11 Number">
 
 
 
@@ -367,11 +367,11 @@
       
         <p>JavaScript是一种动态类型语言(dynamically typed language)。  </p>
 <p>就在刚刚之前对于 <code>String</code> 和 <code>Number</code> 因为 <strong>运算符</strong> 相互转换这件事还是懵的状态。<br>在读 MDN 文档时突然发现，<code>-</code> 号是直接用于数值计算的:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'12'</span> + <span class="number">1</span>; <span class="comment">// '121' String</span></span><br><span class="line"><span class="string">'12'</span> - <span class="number">1</span>; <span class="comment">// 11 Number</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>这是因为 <code>String</code> 之间的累加只有 <code>+</code> 号吧，没见过 <code>-</code> 号的啊。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'we are'</span> + <span class="string">' supermen.'</span>; <span class="comment">// we are supermen.</span></span><br><span class="line"><span class="string">'we are'</span> - <span class="string">' supermen.'</span>; <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure></p>
 <p>所以，我假装悟透了。浏览器是不是先识别的 <strong>运算符</strong>，根据 <strong>运算符</strong> 的类型再决定走哪项运算程序。因为 <code>+</code> 号很多数据类型（string，number…）都在用，所以需要判断加号左右两边的数据类型，再决定运算程序。而 <code>-</code> 貌似只用于数值运算，所以直接将  <code>-</code> 号两侧的直接Number(data)。除了 <code>+</code> 需要去定两侧数据类型外，其他 <strong>运算符</strong> 号是不是不需要呢？这个需要验证一下。  </p>
 <p><em>这个还是需要计算机基础，理解起来会比较快</em></p>
 <hr>
-<a id="more"></a>
 <h3 id="数据类型的转换-Data-type-conversion"><a href="#数据类型的转换-Data-type-conversion" class="headerlink" title="数据类型的转换(Data type conversion)"></a>数据类型的转换(Data type conversion)</h3><p><code>parseInt()</code> 和 <code>parseFloat()</code><br><code>parseInt</code> 舍弃小数点后的浮点数，调用时最好加上进制参数。<br><code>parseFloat</code> 函数解析一个字符串参数并返回一个浮点数。<br>将字符串转换为数字的另一种方法是使用 <strong>单目加法运算符</strong>。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(+<span class="string">"1.1"</span>) + (+<span class="string">"1.1"</span>); <span class="comment">// 2.2</span></span><br></pre></td></tr></table></figure></p>
 
       
@@ -412,6 +412,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/13/js-error/" rel="prev" title="异常处理语句">
+                异常处理语句 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -494,7 +498,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -505,7 +509,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -516,7 +520,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

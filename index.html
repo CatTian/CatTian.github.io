@@ -265,6 +265,327 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/09/13/loop-labeled/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ECHO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ECHO的薄荷塘">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/13/loop-labeled/" itemprop="url">循环 labeled 语句</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-13T15:30:50Z">
+                2018-09-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Loops/" itemprop="url" rel="index">
+                    <span itemprop="name">Loops</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/13/loop-labeled/" class="leancloud_visitors" data-flag-title="循环 labeled 语句">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一个 <code>label</code> 提供了一个可以让你引用到您程序别的位置的标识符。例如，你可以用 <code>label</code> 标识一个循环， 然后使用 <code>break</code> 或者 <code>continue</code> 来指出程序是否该停止循环还是继续循环。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="number">0</span></span><br><span class="line">labelCancelLoops: <span class="keyword">while</span> (<span class="literal">true</span>) &#123;<span class="comment">// 标识 labeled 语句</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"外部循环: "</span> + x);</span><br><span class="line">  x += <span class="number">1</span>;</span><br><span class="line">  z = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"内部循环: "</span> + z);</span><br><span class="line">    z += <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (z === <span class="number">10</span> &amp;&amp; x === <span class="number">10</span>) &#123;</span><br><span class="line">      <span class="keyword">break</span> labelCancelLoops;<span class="comment">// 终止循环 labelCancelLoops</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (z === <span class="number">10</span>) &#123;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/09/13/js-error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ECHO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ECHO的薄荷塘">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/13/js-error/" itemprop="url">异常处理语句</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-12T16:39:36Z">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Erroe/" itemprop="url" rel="index">
+                    <span itemprop="name">Erroe</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/13/js-error/" class="leancloud_visitors" data-flag-title="异常处理语句">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>你可以用 <code>throw</code> 语句抛出一个异常并且用 <code>try...catch</code> 语句捕获处理它。</p>
+<ul>
+<li>throw 语句</li>
+<li>try…catch 语句  </li>
+</ul>
+<hr>
+<h3 id="异常类型"><a href="#异常类型" class="headerlink" title="异常类型"></a>异常类型</h3><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error" target="_blank" rel="noopener"><code>ECMAScript exceptions</code></a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMException" target="_blank" rel="noopener"><code>DOMException</code></a> and <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMError" target="_blank" rel="noopener"><code>DOMError</code></a></li>
+</ul>
+<p><em>点击查看MDN文档</em></p>
+<hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/13/js-error/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/09/11/data-type-conversion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -370,10 +691,6 @@
         
           <p>JavaScript是一种动态类型语言(dynamically typed language)。  </p>
 <p>就在刚刚之前对于 <code>String</code> 和 <code>Number</code> 因为 <strong>运算符</strong> 相互转换这件事还是懵的状态。<br>在读 MDN 文档时突然发现，<code>-</code> 号是直接用于数值计算的:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'12'</span> + <span class="number">1</span>; <span class="comment">// '121' String</span></span><br><span class="line"><span class="string">'12'</span> - <span class="number">1</span>; <span class="comment">// 11 Number</span></span><br></pre></td></tr></table></figure></p>
-<p>这是因为 <code>String</code> 之间的累加只有 <code>+</code> 号吧，没见过 <code>-</code> 号的啊。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'we are'</span> + <span class="string">' supermen.'</span>; <span class="comment">// we are supermen.</span></span><br><span class="line"><span class="string">'we are'</span> - <span class="string">' supermen.'</span>; <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure></p>
-<p>所以，我假装悟透了。浏览器是不是先识别的 <strong>运算符</strong>，根据 <strong>运算符</strong> 的类型再决定走哪项运算程序。因为 <code>+</code> 号很多数据类型（string，number…）都在用，所以需要判断加号左右两边的数据类型，再决定运算程序。而 <code>-</code> 貌似只用于数值运算，所以直接将  <code>-</code> 号两侧的直接Number(data)。除了 <code>+</code> 需要去定两侧数据类型外，其他 <strong>运算符</strong> 号是不是不需要呢？这个需要验证一下。  </p>
-<p><em>这个还是需要计算机基础，理解起来会比较快</em></p>
-<hr>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/09/11/data-type-conversion/#more" rel="contents">
@@ -1530,162 +1847,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/08/22/open-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ECHO">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ECHO的薄荷塘">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/22/open-blog/" itemprop="url">我开通了博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-22T15:54:02Z">
-                2018-08-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂记/" itemprop="url" rel="index">
-                    <span itemprop="name">杂记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/08/22/open-blog/" class="leancloud_visitors" data-flag-title="我开通了博客">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>博客是个学习和积累的小池塘，物种丰富才是我对她的终极梦想。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1729,7 +1897,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1740,7 +1908,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1751,7 +1919,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
