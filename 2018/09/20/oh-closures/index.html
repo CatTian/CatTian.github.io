@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="杂记," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="小薄荷日常杂记.">
-<meta name="keywords" content="Hexo,HTML,CSS,android,Linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://felischaus.com/blog/tags/index.html">
+<meta name="description" content="之前看闭包总是看不明白什么是闭包，解读的过于详细的文章会直接看懵，好难。现在js的基础比以前好了些，发现以前觉得难的部分也开始慢慢变得简单，嗯～，或许不能说是简单，这样说有种自大的感觉，才开始入门就开始骄傲了，应该是慢慢变得我能读懂了些，有些很深入的东西还是会有搞不懂的时候，不过我能感觉到已经进入到js的门里了，不再是在门外徘徊、惆怅、惊恐了，这是好事。同时我也发现，只要多看、多练就会对这些API">
+<meta name="keywords" content="杂记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="观闭包有感">
+<meta property="og:url" content="https://felischaus.com/blog/2018/09/20/oh-closures/index.html">
 <meta property="og:site_name" content="ECHO的薄荷塘">
-<meta property="og:description" content="小薄荷日常杂记.">
+<meta property="og:description" content="之前看闭包总是看不明白什么是闭包，解读的过于详细的文章会直接看懵，好难。现在js的基础比以前好了些，发现以前觉得难的部分也开始慢慢变得简单，嗯～，或许不能说是简单，这样说有种自大的感觉，才开始入门就开始骄傲了，应该是慢慢变得我能读懂了些，有些很深入的东西还是会有搞不懂的时候，不过我能感觉到已经进入到js的门里了，不再是在门外徘徊、惆怅、惊恐了，这是好事。同时我也发现，只要多看、多练就会对这些API">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-27T05:56:52.000Z">
+<meta property="og:updated_time" content="2018-09-20T07:34:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="小薄荷日常杂记.">
+<meta name="twitter:title" content="观闭包有感">
+<meta name="twitter:description" content="之前看闭包总是看不明白什么是闭包，解读的过于详细的文章会直接看懵，好难。现在js的基础比以前好了些，发现以前觉得难的部分也开始慢慢变得简单，嗯～，或许不能说是简单，这样说有种自大的感觉，才开始入门就开始骄傲了，应该是慢慢变得我能读懂了些，有些很深入的东西还是会有搞不懂的时候，不过我能感觉到已经进入到js的门里了，不再是在门外徘徊、惆怅、惊恐了，这是好事。同时我也发现，只要多看、多练就会对这些API">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://felischaus.com/blog/tags/"/>
+  <link rel="canonical" href="https://felischaus.com/blog/2018/09/20/oh-closures/"/>
 
 
 
 
 
-  <title>tags | ECHO的薄荷塘</title>
+  <title>观闭包有感 | ECHO的薄荷塘</title>
   
 
 
@@ -253,40 +253,185 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/09/20/oh-closures/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ECHO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ECHO的薄荷塘">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 17 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Boolean/" style="font-size: 12px; color: #ccc">Boolean</a> <a href="/tags/Closures/" style="font-size: 12px; color: #ccc">Closures</a> <a href="/tags/Data-type/" style="font-size: 12px; color: #ccc">Data type</a> <a href="/tags/Delete/" style="font-size: 12px; color: #ccc">Delete</a> <a href="/tags/ECMAScript-6/" style="font-size: 30px; color: #111">ECMAScript 6</a> <a href="/tags/Erroe/" style="font-size: 12px; color: #ccc">Erroe</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/Loops/" style="font-size: 12px; color: #ccc">Loops</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #ccc">Markdown</a> <a href="/tags/Math/" style="font-size: 12px; color: #ccc">Math</a> <a href="/tags/Plugin/" style="font-size: 12px; color: #ccc">Plugin</a> <a href="/tags/Short-circuit/" style="font-size: 12px; color: #ccc">Short-circuit</a> <a href="/tags/Variable/" style="font-size: 12px; color: #ccc">Variable</a> <a href="/tags/blog/" style="font-size: 12px; color: #ccc">blog</a> <a href="/tags/regular/" style="font-size: 12px; color: #ccc">regular</a> <a href="/tags/杂记/" style="font-size: 12px; color: #ccc">杂记</a> <a href="/tags/比较操作符/" style="font-size: 12px; color: #ccc">比较操作符</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">观闭包有感</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T23:22:07+08:00">
+                2018-09-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂记/" itemprop="url" rel="index">
+                    <span itemprop="name">杂记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/20/oh-closures/" class="leancloud_visitors" data-flag-title="观闭包有感">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>之前看闭包总是看不明白什么是闭包，解读的过于详细的文章会直接看懵，好难。现在js的基础比以前好了些，发现以前觉得难的部分也开始慢慢变得简单，嗯～，或许不能说是简单，这样说有种自大的感觉，才开始入门就开始骄傲了，应该是慢慢变得我能读懂了些，有些很深入的东西还是会有搞不懂的时候，不过我能感觉到已经进入到js的门里了，不再是在门外徘徊、惆怅、惊恐了，这是好事。同时我也发现，只要多看、多练就会对这些API熟悉起来，不再是两不相认的状态。努力是不是白费的，只是我们需要时间来验证，时间有长有短，所以学会等待也是一种修行。</p>
+<p>在开始自己做项目的时候（我的第一份工作就是公司只有我自己是前端，那个时候只懂点html、css，js就零基础，完全自学），我有过想要放弃的想法，有过自暴自弃的时候，但又因为前端这个工作是在是太有趣了，而打消了这个消极态度。我本来是个学设计的人，从小就在自己画画，断断续续，没受过专业训练，所以也就没有学出个什么。学设计其实是在圆儿时的梦，也是叛逆的选择，因为被阻止过，说美术不过是荒废学业。所以我证明给那些曾经阻止过我的人看，我不只学了，还上了大学。大三就被大学老师夸了，曾说我是个做设计的料，非常适合做设计。但在毕业时，我却突然转变方向，走进了这个我知之甚少的转折里。没有挑战就很无聊。我还是喜欢设计，还是喜欢看一些美的东西，这是从心里就向往的东西，并不是改行就能抛下的东西。但我现在是一名前端工程师，虽然是小白，可我确实是个每天都在搬砖的人，是很开心的。至于为什么突然转行，原因已经不想说了，反正不是当年设计做的烂才逃跑的。就酱！</p>
+<p>总的来说，我目前很喜欢我的这个职业。喜欢他的理性。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/杂记/" <i class="fa fa-tag"></i> 杂记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/20/equality-comparison/" rel="next" title="（严格）相等运算符">
+                <i class="fa fa-chevron-left"></i> （严格）相等运算符
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
