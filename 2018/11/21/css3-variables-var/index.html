@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="OG协议," />
+  <meta name="keywords" content="css3 var," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="OG协议——Open Graph Protocol（开放内容协议）最近在写一个手机端页面时有个需求，就是Safari分享页面到其他社交软件时需要设置分享缩略图，第一次接触，有点没思路。第一时间去万能的百度搜了一下没找到，多是写微信分享的相关信息。后来找了个官网查了下源码发现了突破点，经过关键词搜索终于知道这是啥了。需求顺利完成，这个新知识点也get到了。   关键词：OG协议——Open Grap">
-<meta name="keywords" content="OG协议">
+<meta name="description" content="在编写 javascript 时我们深切的体会到变量给我们带来的好处与便利。对于变量的渴求，使Sass/Less/Stylus这些工具应运而生。 在 CSS 预编译器横行的时代，CSS 也不甘落后，为迎合众多前端工程师的需求，CSS工作组迅速跟进CSS变量的规范制定。">
+<meta name="keywords" content="css3 var">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OG协议——Open Graph Protocol（开放内容协议）">
-<meta property="og:url" content="https://felischaus.com/blog/2018/11/08/open-graph/index.html">
+<meta property="og:title" content="css3 的 var 函数">
+<meta property="og:url" content="https://felischaus.com/blog/2018/11/21/css3-variables-var/index.html">
 <meta property="og:site_name" content="ECHO的薄荷塘">
-<meta property="og:description" content="OG协议——Open Graph Protocol（开放内容协议）最近在写一个手机端页面时有个需求，就是Safari分享页面到其他社交软件时需要设置分享缩略图，第一次接触，有点没思路。第一时间去万能的百度搜了一下没找到，多是写微信分享的相关信息。后来找了个官网查了下源码发现了突破点，经过关键词搜索终于知道这是啥了。需求顺利完成，这个新知识点也get到了。   关键词：OG协议——Open Grap">
+<meta property="og:description" content="在编写 javascript 时我们深切的体会到变量给我们带来的好处与便利。对于变量的渴求，使Sass/Less/Stylus这些工具应运而生。 在 CSS 预编译器横行的时代，CSS 也不甘落后，为迎合众多前端工程师的需求，CSS工作组迅速跟进CSS变量的规范制定。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-13T03:30:04.000Z">
+<meta property="og:updated_time" content="2018-11-21T08:46:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OG协议——Open Graph Protocol（开放内容协议）">
-<meta name="twitter:description" content="OG协议——Open Graph Protocol（开放内容协议）最近在写一个手机端页面时有个需求，就是Safari分享页面到其他社交软件时需要设置分享缩略图，第一次接触，有点没思路。第一时间去万能的百度搜了一下没找到，多是写微信分享的相关信息。后来找了个官网查了下源码发现了突破点，经过关键词搜索终于知道这是啥了。需求顺利完成，这个新知识点也get到了。   关键词：OG协议——Open Grap">
+<meta name="twitter:title" content="css3 的 var 函数">
+<meta name="twitter:description" content="在编写 javascript 时我们深切的体会到变量给我们带来的好处与便利。对于变量的渴求，使Sass/Less/Stylus这些工具应运而生。 在 CSS 预编译器横行的时代，CSS 也不甘落后，为迎合众多前端工程师的需求，CSS工作组迅速跟进CSS变量的规范制定。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://felischaus.com/blog/2018/11/08/open-graph/"/>
+  <link rel="canonical" href="https://felischaus.com/blog/2018/11/21/css3-variables-var/"/>
 
 
 
 
 
-  <title>OG协议——Open Graph Protocol（开放内容协议） | ECHO的薄荷塘</title>
+  <title>css3 的 var 函数 | ECHO的薄荷塘</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/11/08/open-graph/">
+    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/11/21/css3-variables-var/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ECHO">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">OG协议——Open Graph Protocol（开放内容协议）</h1>
+          <h1 class="post-title" itemprop="name headline">css3 的 var 函数</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-08T23:07:03+08:00">
-                2018-11-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T14:55:21Z">
+                2018-11-21
               </time>
             
 
@@ -317,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Protocol/" itemprop="url" rel="index">
-                    <span itemprop="name">Protocol</span>
+                  <a href="/categories/css3/" itemprop="url" rel="index">
+                    <span itemprop="name">css3</span>
                   </a>
                 </span>
 
@@ -334,7 +334,7 @@
 
           
           
-             <span id="/2018/11/08/open-graph/" class="leancloud_visitors" data-flag-title="OG协议——Open Graph Protocol（开放内容协议）">
+             <span id="/2018/11/21/css3-variables-var/" class="leancloud_visitors" data-flag-title="css3 的 var 函数">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -365,27 +365,32 @@
       
 
       
-        <h2 id="OG协议——Open-Graph-Protocol（开放内容协议）"><a href="#OG协议——Open-Graph-Protocol（开放内容协议）" class="headerlink" title="OG协议——Open Graph Protocol（开放内容协议）"></a>OG协议——Open Graph Protocol（开放内容协议）</h2><p>最近在写一个手机端页面时有个需求，就是Safari分享页面到其他社交软件时需要设置分享缩略图，第一次接触，有点没思路。第一时间去万能的百度搜了一下没找到，多是写微信分享的相关信息。后来找了个官网查了下源码发现了突破点，经过关键词搜索终于知道这是啥了。需求顺利完成，这个新知识点也get到了。  </p>
-<p>关键词：<strong>OG协议——Open Graph Protocol（开放内容协议）</strong>  </p>
-<p>阿里云活动页源码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:title"</span> <span class="attr">content</span>=<span class="string">"双11红包来啦"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:description"</span> <span class="attr">content</span>=<span class="string">"云产品拼购1折起，拉新有机会得1111元红包！"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:image"</span> <span class="attr">content</span>=<span class="string">"https://img.alicdn.com/tfs/TB1jxIWjYPpK1RjSZFFXXa5PpXa-350-350.png"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+        <p>在编写 javascript 时我们深切的体会到变量给我们带来的好处与便利。对于变量的渴求，使Sass/Less/Stylus这些工具应运而生。</p>
+<p>在 CSS 预编译器横行的时代，CSS 也不甘落后，为迎合众多前端工程师的需求，CSS工作组迅速跟进CSS变量的规范制定。</p>
 <a id="more"></a>
-<h3 id="一、什么是-OG协议"><a href="#一、什么是-OG协议" class="headerlink" title="一、什么是 OG协议"></a>一、什么是 OG协议</h3><p>Open Graph Protocol 本身是一套 Metatags 的规范，用来标注页面的类型和描述页面的内容。由 Facebook 在2010年F8会议上公布。</p>
-<h3 id="二、如何参与Open-Graph-Protocol"><a href="#二、如何参与Open-Graph-Protocol" class="headerlink" title="二、如何参与Open Graph Protocol"></a>二、如何参与Open Graph Protocol</h3><p>og标签是一种新的http头部标记，即Open Graph Protocol（开放内容协议）。在页面添加这种协议可以让网页成为一个“富媒体对象”，表示同意网页内容可以被其他社会化网站引用等。</p>
-<p>目前Facebook、人人等SNS网站都支持该协议。任何网页只要遵守该协议，SNS网站就能从页面上提取最有效的信息并呈现给用户；也能让SNS网站按照页面上og标签规定的内容呈现给用户。</p>
-<h3 id="三、参与到Open-Graph-Protocol的好处"><a href="#三、参与到Open-Graph-Protocol的好处" class="headerlink" title="三、参与到Open Graph Protocol的好处"></a>三、参与到Open Graph Protocol的好处</h3><p>能够正确的分享您的内容到SNS网站</p>
-<p>帮助您的内容更有效的的在SNS网站中传播</p>
-<p><em>SNS 已经成为网络上的一大热门应用，优质的内容通过分享在好友间迅速传播。为了提高站外内容的传播效率，2010年F8会议上 Facebook 公布了一套开放内容协议 <code>(Open Graph Protocol)</code>，任何网页只要遵守该协议，SNS 就能从页面上提取最有效的信息并呈现给用户。</em></p>
-<h3 id="四、是否会对百度收录造成影响"><a href="#四、是否会对百度收录造成影响" class="headerlink" title="四、是否会对百度收录造成影响"></a>四、是否会对百度收录造成影响</h3><p>增加的og标签是可以被搜索引擎发现并评估权重的，也就是说你将原有meta信息优化手段同时使用到og标签当中，加强meta信息优化内容；对于权重提升和排名还是很有利的。</p>
-<p>目前百度支持OG协议。按照百度的标准添加og标签是参与百度星火计划的前提条件之一。</p>
-<p>参与OG协议对百度收录的好处：</p>
-<ol>
-<li>能够正确被蜘蛛抓取您的内容到百度网页搜索　</li>
-<li>帮助您的内容更有效的在百度结构化展现　</li>
-<li>按照您网页的类型，在<head>中添加入meta标签,并填上相应的内容</head></li>
-</ol>
-<h3 id="主要标签属性编辑"><a href="#主要标签属性编辑" class="headerlink" title="主要标签属性编辑"></a>主要标签属性编辑</h3><p>基于Metatags的规格，使用 <code>&lt;meta property=&quot;og:xx&quot;  /&gt;</code> 标签<br><code>og:title</code> 标题<br><code>og:type</code> 类型，常用值:<code>article</code> <code>book</code> <code>movie</code><br><code>og:image</code> 略缩图地址<br><code>og:url</code> 页面地址<br><code>og:description</code> 页面的简单描述<br><code>og:site_name</code> 页面所在网站名<br><code>og:videosrc</code> 视频或者Flash地址<br><code>og:audiosrc</code> 音频地址</p>
-<p>参考文献：<br><a href="http://ogp.me/" target="_blank" rel="noopener">The Open Graph protocol–官网</a><br><a href="https://www.jianshu.com/p/dedd9a9aff4e" target="_blank" rel="noopener">regman–简书</a></p>
+<h3 id="root"><a href="#root" class="headerlink" title=":root"></a>:root</h3><p>在说变量之前还要先了解一个东西 <code>:root</code> 这个 <strong>css</strong> 伪类匹配文档树的根元素。<br>对于 HTML 来说，<code>:root</code> 表示 <code>&lt;html&gt;</code> 元素，除了优先级更高之外，与 <code>html</code> 选择器相同。  </p>
+<p><code>:root</code>在声明全局 CSS 变量时会很有用：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--main-color</span>: hotpink;</span><br><span class="line">  <span class="attribute">--pane-padding</span>: <span class="number">5px</span> <span class="number">42px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在开始步入正题。</p>
+<hr>
+<h3 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性 (--*)"></a>自定义属性 (--*)</h3><p><code>--*</code> 其中 <code>--</code>是变量名前缀，<code>*</code>是变量名。使用方式是 <code>var(--*)</code>; 执行函数<code>var()</code> 是我们接来下介绍的 <strong>css</strong> 函数。<br>命名规则并没有 <strong>css</strong> 选择器那么多限制。但是，不能包含 <code>$，[，^，(，%</code> 等字符，普通字符局限在只要是“数字<code>[0-9]</code>”“字母<code>[a-zA-Z]</code>”“下划线<code>_</code>”和“短横线<code>-</code>”这些组合，但是可以是<code>中文</code>，<code>日文</code>或者<code>韩文</code>。<br>随后脑补了一下以后不用守着翻译器命名了。</p>
+<p>语法: <declaration-value><br>这个值将会由一个或者多个语法执行出来，只要这些语法是正确合理的，不包含非法语句。这个值就理应是有效语法执行出来的值。</declaration-value></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">--somekeyword</span>: <span class="selector-tag">left</span>;</span><br><span class="line"><span class="selector-tag">--somecolor</span>: <span class="selector-id">#0000ff</span>;</span><br><span class="line"><span class="selector-tag">--somecomplexvalue</span>: 3<span class="selector-tag">px</span> 6<span class="selector-tag">px</span> <span class="selector-tag">rgb</span>(20, 32, 54);</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  --红色: red;</span><br><span class="line">  <span class="selector-tag">background-color</span>: <span class="selector-tag">var</span>(<span class="selector-tag">--</span>红色);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="var-函数"><a href="#var-函数" class="headerlink" title="var() 函数"></a><code>var()</code> 函数</h3><p><code>var()</code> 函数可以代替元素中任何属性中的值的任何部分。<code>var()</code> 函数不能作为属性名、选择器或者其他除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）</p>
+<p>语法：var( <custom-property-name> [, <declaration-value> ]? ) 白话解释就是 var(自定义属性名[, 回退值]) 方法的第一个参数是要替换的自定义属性的名称。函数的可选第二个参数用作回退值。如果第一个参数引用的自定义属性无效，则该函数将使用第二个值。</declaration-value></custom-property-name></p>
+<p>实例：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--main-bg-color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--main-bg-color);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 回退值 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 在父元素样式中 */</span></span><br><span class="line"><span class="selector-class">.component</span> &#123;</span><br><span class="line">  <span class="attribute">--text-color</span>: <span class="number">#080</span>; <span class="comment">/* header-color 并没有被设定 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 在 component 的样式中： */</span></span><br><span class="line"><span class="selector-class">.component</span> <span class="selector-class">.header</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--header-color, blue); <span class="comment">/* 此处 color 被回退到 blue */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.component</span> <span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--text-color, black); <span class="comment">/* 此处 color 被回退到 blue */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下面这个例子来自 张鑫旭大神<a href="http://www.zhangxinxu.com/wordpress/?p=5804" target="_blank" rel="noopener">《小tips:了解CSS/CSS3原生变量var》</a>权重关系解说的很直观了。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">  <span class="selector-pseudo">:root</span> &#123; <span class="attribute">--color</span>: purple; &#125;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">div</span> &#123; <span class="attribute">--color</span>: green; &#125;</span></span><br><span class="line"><span class="css">  <span class="selector-id">#alert</span> &#123; <span class="attribute">--color</span>: red; &#125;</span></span><br><span class="line"><span class="css">  * &#123; <span class="attribute">color</span>: <span class="built_in">var</span>(--color); &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我的紫色继承于根元素<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>我的绿色来自直接设置<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'alert'</span>&gt;</span></span><br><span class="line">  ID选择器权重更高，因此阿拉是红色！</span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>我也是红色，占了继承的光<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="错误使用"><a href="#错误使用" class="headerlink" title="错误使用"></a>错误使用</h3><p>无论是变量的定义和使用只能在声明块{}里面，例如，下面这样是无效的</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">--</span>红色: <span class="selector-tag">red</span>;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--红色);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="兼容"><a href="#兼容" class="headerlink" title="兼容"></a>兼容</h3><ul>
+<li>chrome <strong>49+</strong></li>
+<li>firefox <strong>49+</strong></li>
+<li>safari <strong>9.1+</strong></li>
+<li>opera <strong>41+</strong></li>
+<li>iOS safari <strong>9.3+</strong></li>
+<li>ie <strong>不支持</strong></li>
+</ul>
 
       
     </div>
@@ -403,7 +408,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OG协议/" <i class="fa fa-tag"></i> OG协议</a>
+            <a href="/tags/css3-var/" <i class="fa fa-tag"></i> css3 var</a>
           
         </div>
       
@@ -416,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/31/js-check-userAgent/" rel="next" title="js识别浏览器引擎、平台、操作系统、设备、游戏系统">
-                <i class="fa fa-chevron-left"></i> js识别浏览器引擎、平台、操作系统、设备、游戏系统
+              <a href="/2018/11/21/css3-currentColor/" rel="next" title="css3 拓展关键字 currentColor 详解与应用">
+                <i class="fa fa-chevron-left"></i> css3 拓展关键字 currentColor 详解与应用
               </a>
             
           </div>
@@ -425,10 +430,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/13/media-font-size/" rel="prev" title="移动端字体适配">
-                移动端字体适配 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -566,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#OG协议——Open-Graph-Protocol（开放内容协议）"><span class="nav-number">1.</span> <span class="nav-text">OG协议——Open Graph Protocol（开放内容协议）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、什么是-OG协议"><span class="nav-number">1.1.</span> <span class="nav-text">一、什么是 OG协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、如何参与Open-Graph-Protocol"><span class="nav-number">1.2.</span> <span class="nav-text">二、如何参与Open Graph Protocol</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、参与到Open-Graph-Protocol的好处"><span class="nav-number">1.3.</span> <span class="nav-text">三、参与到Open Graph Protocol的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、是否会对百度收录造成影响"><span class="nav-number">1.4.</span> <span class="nav-text">四、是否会对百度收录造成影响</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主要标签属性编辑"><span class="nav-number">1.5.</span> <span class="nav-text">主要标签属性编辑</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#root"><span class="nav-number">1.</span> <span class="nav-text">:root</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义属性"><span class="nav-number">2.</span> <span class="nav-text">自定义属性 (--*)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-函数"><span class="nav-number">3.</span> <span class="nav-text">var() 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误使用"><span class="nav-number">4.</span> <span class="nav-text">错误使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容"><span class="nav-number">5.</span> <span class="nav-text">兼容</span></a></li></ol></div>
             
 
           </div>
