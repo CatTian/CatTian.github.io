@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Closures," />
+  <meta name="keywords" content="css3," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="所谓闭包，就是嵌套函数。   内部函数可以访问定义在外部函数中的所有变量和函数，以及外部函数能访问的所有变量和函数。   但是，外部函数却不能够访问定义在内部函数中的变量和函数。   当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。">
-<meta name="keywords" content="Closures">
+<meta name="description" content="前言最近读文章读到一个被我忽略的知识点，border 的颜色默认值是其字体 color 值。突然发现每天都要打交道的老伙计居然还有这隐藏特性，估计是一般 border 的颜色跟字体颜色不同，直接被我忽略了这个特性。惭愧啊，学艺不精。不过现在知道也不晚，好知识要的就是积累。言归正传，开始记录新知识点，css3 的拓展关键字 currentColor。这个知识点是阅读 张鑫旭大神的《currentCo">
+<meta name="keywords" content="css3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="闭包">
-<meta property="og:url" content="https://felischaus.com/blog/2018/09/14/js-closures/index.html">
+<meta property="og:title" content="css3 拓展关键字 currentColor 详解与应用">
+<meta property="og:url" content="https://felischaus.com/blog/2018/11/21/css3-currentColor/index.html">
 <meta property="og:site_name" content="ECHO的薄荷塘">
-<meta property="og:description" content="所谓闭包，就是嵌套函数。   内部函数可以访问定义在外部函数中的所有变量和函数，以及外部函数能访问的所有变量和函数。   但是，外部函数却不能够访问定义在内部函数中的变量和函数。   当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。">
+<meta property="og:description" content="前言最近读文章读到一个被我忽略的知识点，border 的颜色默认值是其字体 color 值。突然发现每天都要打交道的老伙计居然还有这隐藏特性，估计是一般 border 的颜色跟字体颜色不同，直接被我忽略了这个特性。惭愧啊，学艺不精。不过现在知道也不晚，好知识要的就是积累。言归正传，开始记录新知识点，css3 的拓展关键字 currentColor。这个知识点是阅读 张鑫旭大神的《currentCo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-21T02:31:39.000Z">
+<meta property="og:updated_time" content="2018-11-21T06:02:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="闭包">
-<meta name="twitter:description" content="所谓闭包，就是嵌套函数。   内部函数可以访问定义在外部函数中的所有变量和函数，以及外部函数能访问的所有变量和函数。   但是，外部函数却不能够访问定义在内部函数中的变量和函数。   当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。">
+<meta name="twitter:title" content="css3 拓展关键字 currentColor 详解与应用">
+<meta name="twitter:description" content="前言最近读文章读到一个被我忽略的知识点，border 的颜色默认值是其字体 color 值。突然发现每天都要打交道的老伙计居然还有这隐藏特性，估计是一般 border 的颜色跟字体颜色不同，直接被我忽略了这个特性。惭愧啊，学艺不精。不过现在知道也不晚，好知识要的就是积累。言归正传，开始记录新知识点，css3 的拓展关键字 currentColor。这个知识点是阅读 张鑫旭大神的《currentCo">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://felischaus.com/blog/2018/09/14/js-closures/"/>
+  <link rel="canonical" href="https://felischaus.com/blog/2018/11/21/css3-currentColor/"/>
 
 
 
 
 
-  <title>闭包 | ECHO的薄荷塘</title>
+  <title>css3 拓展关键字 currentColor 详解与应用 | ECHO的薄荷塘</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/09/14/js-closures/">
+    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/11/21/css3-currentColor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ECHO">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">闭包</h1>
+          <h1 class="post-title" itemprop="name headline">css3 拓展关键字 currentColor 详解与应用</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-14T00:43:45+08:00">
-                2018-09-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T18:32:51+08:00">
+                2018-11-21
               </time>
             
 
@@ -317,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">Javascript</span>
+                  <a href="/categories/css3/" itemprop="url" rel="index">
+                    <span itemprop="name">css3</span>
                   </a>
                 </span>
 
@@ -334,7 +334,7 @@
 
           
           
-             <span id="/2018/09/14/js-closures/" class="leancloud_visitors" data-flag-title="闭包">
+             <span id="/2018/11/21/css3-currentColor/" class="leancloud_visitors" data-flag-title="css3 拓展关键字 currentColor 详解与应用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -365,25 +365,26 @@
       
 
       
-        <p>所谓闭包，就是嵌套函数。  </p>
-<p>内部函数可以访问定义在外部函数中的所有变量和函数，以及外部函数能访问的所有变量和函数。  </p>
-<p>但是，外部函数却不能够访问定义在内部函数中的变量和函数。  </p>
-<p>当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近读文章读到一个被我忽略的知识点，<code>border</code> 的颜色默认值是其字体 <code>color</code> 值。突然发现每天都要打交道的老伙计居然还有这隐藏特性，估计是一般 <code>border</code> 的颜色跟字体颜色不同，直接被我忽略了这个特性。惭愧啊，学艺不精。不过现在知道也不晚，好知识要的就是积累。言归正传，开始记录新知识点，<strong>css3</strong> 的拓展关键字 <code>currentColor</code>。这个知识点是阅读 张鑫旭大神的<a href="http://www.zhangxinxu.com/wordpress/?p=4385" target="_blank" rel="noopener">《currentColor-CSS3超高校级好用CSS变量》</a>这篇文章时知道的，大神的博客风格幽默诙谐，品质上佳。这篇文章发表于2014年，距离现在有四年的时间了，按时间算也是个老知识点了，但是对我来说还很新很新。</p>
 <a id="more"></a>
-<h3 id="嵌套函数和闭包"><a href="#嵌套函数和闭包" class="headerlink" title="嵌套函数和闭包"></a>嵌套函数和闭包</h3><p>调用外部函数并为外部函数和内部函数指定参数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outside</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inside</span>(<span class="params">y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> inside;</span><br><span class="line">&#125;</span><br><span class="line">fn_inside = outside(<span class="number">3</span>); <span class="comment">// Think of it like: give me a function that adds 3 to whatever you give it</span></span><br><span class="line">result = fn_inside(<span class="number">5</span>); <span class="comment">// returns 8</span></span><br><span class="line"></span><br><span class="line">result1 = outside(<span class="number">3</span>)(<span class="number">5</span>); <span class="comment">// returns 8</span></span><br></pre></td></tr></table></figure></p>
-<p>多层嵌套函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这个类似的函数经常出现在面试题中！ 主要考察的是闭包、作用域</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">B</span>(<span class="params">y</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">C</span>(<span class="params">z</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(x + y + z);</span><br><span class="line">    &#125;</span><br><span class="line">    C(<span class="number">3</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  B(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line">A(<span class="number">1</span>); <span class="comment">// logs 6 (1 + 2 + 3)</span></span><br></pre></td></tr></table></figure></p>
-<p>在这个例子里面，C可以访问B的y和A的x。这是因为：</p>
-<ol>
-<li>B形成了一个包含A的闭包，B可以访问A的参数和变量</li>
-<li>C形成了一个包含B的闭包</li>
-<li>B包含A，所以C也包含A，C可以访问B和A的参数和变量。换言之，C用这个顺序链接了B和A的作用域  </li>
-</ol>
-<p>反过来却不是这样。A不能访问C，因为A看不到B中的参数和变量，C是B中的一个变量，所以C是B私有的。  </p>
-<h3 id="命名冲突"><a href="#命名冲突" class="headerlink" title="命名冲突"></a>命名冲突</h3><p>当同一个闭包作用域下两个参数或者变量同名时，就会产生命名冲突。更近的作用域有更高的优先权，所以最近的优先级最高，最远的优先级最低。这就是作用域链。链的第一个元素就是最里面的作用域，最后一个元素便是最外层的作用域。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这个页经常出现在面试题中！ 主要考察的是闭包、作用域、调用方式的理解（我之前就搞不太懂这种调用方式）、命名冲突</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outside</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">5</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inside</span>(<span class="params">x</span>) </span>&#123; <span class="comment">// inside的x具有最高优先权</span></span><br><span class="line">    <span class="keyword">return</span> x * <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> inside;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">outside()(<span class="number">10</span>); <span class="comment">// 直接给 inside 传参 [返回 20]</span></span><br></pre></td></tr></table></figure></p>
-<p>复杂的闭包：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> createPet = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> sex;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    setName: <span class="function"><span class="keyword">function</span>(<span class="params">newName</span>) </span>&#123;</span><br><span class="line">      name = newName;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    getName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> name;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    getSex: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> sex;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    setSex: <span class="function"><span class="keyword">function</span>(<span class="params">newSex</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">typeof</span> newSex == <span class="string">"string"</span></span><br><span class="line">        &amp;&amp; (newSex.toLowerCase() == <span class="string">"male"</span> || newSex.toLowerCase() == <span class="string">"female"</span>)) &#123;</span><br><span class="line">        sex = newSex;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> pet = createPet(<span class="string">"Vivie"</span>);</span><br><span class="line">pet.getName();                  <span class="comment">// Vivie</span></span><br><span class="line"></span><br><span class="line">pet.setName(<span class="string">"Oliver"</span>);</span><br><span class="line">pet.setSex(<span class="string">"male"</span>);</span><br><span class="line">pet.getSex();                   <span class="comment">// male</span></span><br><span class="line">pet.getName();                  <span class="comment">// Oliver</span></span><br></pre></td></tr></table></figure></p>
-<div class="note warning"><p>⚠️注意：如果一个闭包的函数用外部函数的变量名定义了同样的变量，那在外部函数域将再也无法指向该变量</p></div>
-
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures" target="_blank" rel="noopener">更加深入的闭包解析 MDN 中阶</a></p>
+<h3 id="详解含义"><a href="#详解含义" class="headerlink" title="详解含义"></a>详解含义</h3><p><code>currentColor</code> 的解释是：使用该关键字的元素的（或其最近父元素）<code>color</code> 属性的颜色值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  .warp&#123;</span></span><br><span class="line"><span class="undefined">    color: #f90;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  /* 此时，currentColor 等于 .wrap 元素的 color 属性值 */</span></span><br><span class="line"><span class="undefined">  .warp p&#123;</span></span><br><span class="line"><span class="undefined">    color: #fff;</span></span><br><span class="line"><span class="undefined">    background-color: currentColor;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"warp"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是一行文字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>这个关键字的应用简直就是赞到家！</p>
+<p>比如在 <code>hover</code> 时，就可以只改变字体颜色而其他子元素的背景色、边框色、等支持 <code>currentColor</code> 关键字的属性颜色也会随着改变，让我们解放一部分繁琐的代码。</p>
+<p>或者在需要牵连甚多复杂的变化效果时，也能体现 <code>currentColor</code> 的应用价值。</p>
+<p>另外 <code>border</code>、<code>box-shadow</code>、<code>background</code> 及 <code>background-image: linear-gradient(to bottom, currentColor, #fff)</code> 渐变色、<code>svg</code> 中的 <code>fill: currentColor</code> 等。这些属性都可以应用 <code>currentColor</code> 关键字。另外：<code>border:2px solid ;</code> <code>box-shadow:2px 2px;</code>这种写法在所有浏览器上（包括IE6）也是没有问题的，默认的颜色值就是 <code>color</code> 的值。</p>
+<p>“<em>图形跟随文字颜色状态同时变化，达到了「图文合一」的境界</em>” – 引言自 张鑫旭大神的<a href="http://www.zhangxinxu.com/wordpress/?p=4385" target="_blank" rel="noopener">《currentColor-CSS3超高校级好用CSS变量》</a>这篇文章。</p>
+<h3 id="兼容"><a href="#兼容" class="headerlink" title="兼容"></a>兼容</h3><ul>
+<li>ie: <strong>9+</strong></li>
+<li>edge: <strong>12+</strong></li>
+<li>firefox: <strong>2+</strong></li>
+<li>chrome: <strong>4+</strong></li>
+<li>safar: <strong>4+</strong></li>
+<li>opera: <strong>10+</strong></li>
+<li>iOS safar: <strong>4+</strong></li>
+<li>Android browse: <strong>2.1+</strong></li>
+</ul>
+<p>在iOS Safari浏览器下(iOS8)下，currentColor还是有一些bug的，例如伪元素hover时候，background:currentColor的背景色不会跟着变化</p>
 
       
     </div>
@@ -401,7 +402,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Closures/" <i class="fa fa-tag"></i> Closures</a>
+            <a href="/tags/css3/" <i class="fa fa-tag"></i> css3</a>
           
         </div>
       
@@ -414,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/13/loop-labeled/" rel="next" title="循环 labeled 语句">
-                <i class="fa fa-chevron-left"></i> 循环 labeled 语句
+              <a href="/2018/11/13/media-font-size/" rel="next" title="移动端字体适配">
+                <i class="fa fa-chevron-left"></i> 移动端字体适配
               </a>
             
           </div>
@@ -423,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/14/unary-operators-delete/" rel="prev" title="一元操作符 delete">
-                一元操作符 delete <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -564,7 +561,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套函数和闭包"><span class="nav-number">1.</span> <span class="nav-text">嵌套函数和闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名冲突"><span class="nav-number">2.</span> <span class="nav-text">命名冲突</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详解含义"><span class="nav-number">2.</span> <span class="nav-text">详解含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用"><span class="nav-number">3.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容"><span class="nav-number">4.</span> <span class="nav-text">兼容</span></a></li></ol></div>
             
 
           </div>
