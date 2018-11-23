@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="css3 var," />
+  <meta name="keywords" content="CSS3 var," />
 
 
 
@@ -80,16 +80,16 @@
 
 
 <meta name="description" content="在编写 javascript 时我们深切的体会到变量给我们带来的好处与便利。对于变量的渴求，使Sass/Less/Stylus这些工具应运而生。 在 CSS 预编译器横行的时代，CSS 也不甘落后，为迎合众多前端工程师的需求，CSS工作组迅速跟进CSS变量的规范制定。">
-<meta name="keywords" content="css3 var">
+<meta name="keywords" content="CSS3 var">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css3 的 var 函数">
+<meta property="og:title" content="CSS3 的 var 函数">
 <meta property="og:url" content="https://felischaus.com/blog/2018/11/21/css3-variables-var/index.html">
 <meta property="og:site_name" content="ECHO的薄荷塘">
 <meta property="og:description" content="在编写 javascript 时我们深切的体会到变量给我们带来的好处与便利。对于变量的渴求，使Sass/Less/Stylus这些工具应运而生。 在 CSS 预编译器横行的时代，CSS 也不甘落后，为迎合众多前端工程师的需求，CSS工作组迅速跟进CSS变量的规范制定。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-21T08:46:43.000Z">
+<meta property="og:updated_time" content="2018-11-22T02:44:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css3 的 var 函数">
+<meta name="twitter:title" content="CSS3 的 var 函数">
 <meta name="twitter:description" content="在编写 javascript 时我们深切的体会到变量给我们带来的好处与便利。对于变量的渴求，使Sass/Less/Stylus这些工具应运而生。 在 CSS 预编译器横行的时代，CSS 也不甘落后，为迎合众多前端工程师的需求，CSS工作组迅速跟进CSS变量的规范制定。">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>css3 的 var 函数 | ECHO的薄荷塘</title>
+  <title>CSS3 的 var 函数 | ECHO的薄荷塘</title>
   
 
 
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">css3 的 var 函数</h1>
+          <h1 class="post-title" itemprop="name headline">CSS3 的 var 函数</h1>
         
 
         <div class="post-meta">
@@ -294,7 +294,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T14:55:21Z">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T22:55:21+08:00">
                 2018-11-21
               </time>
             
@@ -317,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css3/" itemprop="url" rel="index">
-                    <span itemprop="name">css3</span>
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
                   </a>
                 </span>
 
@@ -334,7 +334,7 @@
 
           
           
-             <span id="/2018/11/21/css3-variables-var/" class="leancloud_visitors" data-flag-title="css3 的 var 函数">
+             <span id="/2018/11/21/css3-variables-var/" class="leancloud_visitors" data-flag-title="CSS3 的 var 函数">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -368,21 +368,37 @@
         <p>在编写 javascript 时我们深切的体会到变量给我们带来的好处与便利。对于变量的渴求，使Sass/Less/Stylus这些工具应运而生。</p>
 <p>在 CSS 预编译器横行的时代，CSS 也不甘落后，为迎合众多前端工程师的需求，CSS工作组迅速跟进CSS变量的规范制定。</p>
 <a id="more"></a>
-<h3 id="root"><a href="#root" class="headerlink" title=":root"></a>:root</h3><p>在说变量之前还要先了解一个东西 <code>:root</code> 这个 <strong>css</strong> 伪类匹配文档树的根元素。<br>对于 HTML 来说，<code>:root</code> 表示 <code>&lt;html&gt;</code> 元素，除了优先级更高之外，与 <code>html</code> 选择器相同。  </p>
+<h3 id="root"><a href="#root" class="headerlink" title=":root"></a>:root</h3><p>在说变量之前还要先了解一个东西 <code>:root</code> 这个 <strong>CSS</strong> 伪类匹配文档树的根元素。<br>对于 HTML 来说，<code>:root</code> 表示 <code>&lt;html&gt;</code> 元素，除了优先级更高之外，与 <code>html</code> 选择器相同。  </p>
 <p><code>:root</code>在声明全局 CSS 变量时会很有用：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--main-color</span>: hotpink;</span><br><span class="line">  <span class="attribute">--pane-padding</span>: <span class="number">5px</span> <span class="number">42px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>现在开始步入正题。</p>
 <hr>
-<h3 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性 (--*)"></a>自定义属性 (--*)</h3><p><code>--*</code> 其中 <code>--</code>是变量名前缀，<code>*</code>是变量名。使用方式是 <code>var(--*)</code>; 执行函数<code>var()</code> 是我们接来下介绍的 <strong>css</strong> 函数。<br>命名规则并没有 <strong>css</strong> 选择器那么多限制。但是，不能包含 <code>$，[，^，(，%</code> 等字符，普通字符局限在只要是“数字<code>[0-9]</code>”“字母<code>[a-zA-Z]</code>”“下划线<code>_</code>”和“短横线<code>-</code>”这些组合，但是可以是<code>中文</code>，<code>日文</code>或者<code>韩文</code>。<br>随后脑补了一下以后不用守着翻译器命名了。</p>
-<p>语法: <declaration-value><br>这个值将会由一个或者多个语法执行出来，只要这些语法是正确合理的，不包含非法语句。这个值就理应是有效语法执行出来的值。</declaration-value></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">--somekeyword</span>: <span class="selector-tag">left</span>;</span><br><span class="line"><span class="selector-tag">--somecolor</span>: <span class="selector-id">#0000ff</span>;</span><br><span class="line"><span class="selector-tag">--somecomplexvalue</span>: 3<span class="selector-tag">px</span> 6<span class="selector-tag">px</span> <span class="selector-tag">rgb</span>(20, 32, 54);</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  --红色: red;</span><br><span class="line">  <span class="selector-tag">background-color</span>: <span class="selector-tag">var</span>(<span class="selector-tag">--</span>红色);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性 (--*)"></a>自定义属性 (--*)</h3><p><code>--*</code> 其中 <code>--</code>是变量名前缀，<code>*</code>是变量名。使用方式是 <code>var(--*)</code>; 执行函数<code>var()</code> 是我们接来下介绍的 <strong>CSS</strong> 函数。<br>命名规则并没有 <strong>CSS</strong> 选择器那么多限制。但是，不能包含 <code>$，[，^，(，%</code> 等字符，普通字符局限在只要是“数字<code>[0-9]</code>”“字母<code>[a-zA-Z]</code>”“下划线<code>_</code>”和“短横线<code>-</code>”这些组合，但是可以是<code>中文</code>，<code>日文</code>或者<code>韩文</code>。<br>随后脑补了一下以后不用守着翻译器命名了。</p>
+<p>语法: <code>&lt;declaration-value&gt;</code><br>这个值将会由一个或者多个语法执行出来，只要这些语法是正确合理的，不包含非法语句。这个值就理应是有效语法执行出来的值。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;</span><br><span class="line">  <span class="attribute">--somekeyword</span>: left;</span><br><span class="line">  <span class="attribute">--somecolor</span>: <span class="number">#0000ff</span>;</span><br><span class="line">  <span class="attribute">--somecomplexvalue</span>: <span class="number">3px</span> <span class="number">6px</span> <span class="built_in">rgb</span>(20, 32, 54);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  --红色: red;</span><br><span class="line">  <span class="selector-tag">background-color</span>: <span class="selector-tag">var</span>(<span class="selector-tag">--</span>红色);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="var-函数"><a href="#var-函数" class="headerlink" title="var() 函数"></a><code>var()</code> 函数</h3><p><code>var()</code> 函数可以代替元素中任何属性中的值的任何部分。<code>var()</code> 函数不能作为属性名、选择器或者其他除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）</p>
-<p>语法：var( <custom-property-name> [, <declaration-value> ]? ) 白话解释就是 var(自定义属性名[, 回退值]) 方法的第一个参数是要替换的自定义属性的名称。函数的可选第二个参数用作回退值。如果第一个参数引用的自定义属性无效，则该函数将使用第二个值。</declaration-value></custom-property-name></p>
+<p>语法：<code>var( &lt;custom-property-name&gt; [, &lt;declaration-value&gt; ]? )</code> 白话解释就是 var(自定义属性名[, 回退值]) 方法的第一个参数是要替换的自定义属性的名称。函数的可选第二个参数用作回退值。如果第一个参数引用的自定义属性无效，则该函数将使用第二个值。</p>
 <p>实例：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attribute">--main-bg-color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--main-bg-color);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 回退值 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 在父元素样式中 */</span></span><br><span class="line"><span class="selector-class">.component</span> &#123;</span><br><span class="line">  <span class="attribute">--text-color</span>: <span class="number">#080</span>; <span class="comment">/* header-color 并没有被设定 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 在 component 的样式中： */</span></span><br><span class="line"><span class="selector-class">.component</span> <span class="selector-class">.header</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--header-color, blue); <span class="comment">/* 此处 color 被回退到 blue */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.component</span> <span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--text-color, black); <span class="comment">/* 此处 color 被回退到 blue */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>下面这个例子来自 张鑫旭大神<a href="http://www.zhangxinxu.com/wordpress/?p=5804" target="_blank" rel="noopener">《小tips:了解CSS/CSS3原生变量var》</a>权重关系解说的很直观了。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">  <span class="selector-pseudo">:root</span> &#123; <span class="attribute">--color</span>: purple; &#125;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">div</span> &#123; <span class="attribute">--color</span>: green; &#125;</span></span><br><span class="line"><span class="css">  <span class="selector-id">#alert</span> &#123; <span class="attribute">--color</span>: red; &#125;</span></span><br><span class="line"><span class="css">  * &#123; <span class="attribute">color</span>: <span class="built_in">var</span>(--color); &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我的紫色继承于根元素<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>我的绿色来自直接设置<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'alert'</span>&gt;</span></span><br><span class="line">  ID选择器权重更高，因此阿拉是红色！</span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>我也是红色，占了继承的光<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="错误使用"><a href="#错误使用" class="headerlink" title="错误使用"></a>错误使用</h3><p>无论是变量的定义和使用只能在声明块{}里面，例如，下面这样是无效的</p>
+<p>下面这些个例子与特性详解来自 张鑫旭大神<a href="http://www.zhangxinxu.com/wordpress/?p=5804" target="_blank" rel="noopener">《小tips:了解CSS/CSS3原生变量var》</a>解说的很直观了。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/CSS"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">  <span class="selector-pseudo">:root</span> &#123; <span class="attribute">--color</span>: purple; &#125;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">div</span> &#123; <span class="attribute">--color</span>: green; &#125;</span></span><br><span class="line"><span class="css">  <span class="selector-id">#alert</span> &#123; <span class="attribute">--color</span>: red; &#125;</span></span><br><span class="line"><span class="css">  * &#123; <span class="attribute">color</span>: <span class="built_in">var</span>(--color); &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我的紫色继承于根元素<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>我的绿色来自直接设置<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'alert'</span>&gt;</span></span><br><span class="line">  ID选择器权重更高，因此阿拉是红色！</span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>我也是红色，占了继承的光<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><h4 id="错误使用"><a href="#错误使用" class="headerlink" title="错误使用"></a>错误使用</h4><p>无论是变量的定义和使用只能在声明块 <code>{}</code> 里面，例如，下面这样是无效的</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">--</span>红色: <span class="selector-tag">red</span>;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--红色);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="CSS-属性名不可以走变量"><a href="#CSS-属性名不可以走变量" class="headerlink" title="CSS 属性名不可以走变量"></a>CSS 属性名不可以走变量</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">--bc</span>: background-color;    </span><br><span class="line">    var(--bc): #369;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="CSS-不支持同时多个声明"><a href="#CSS-不支持同时多个声明" class="headerlink" title="CSS 不支持同时多个声明"></a>CSS 不支持同时多个声明</h4><h4 id="CSS-变量不合法的缺省特性"><a href="#CSS-变量不合法的缺省特性" class="headerlink" title="CSS 变量不合法的缺省特性"></a>CSS 变量不合法的缺省特性</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">--color</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#369</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--color, #cd0000);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* &lt;body&gt;的背景色是 transparent */</span></span><br></pre></td></tr></table></figure>
+<p><em>对于 CSS 变量，只要语法是正确的，就算变量里面的值是个乱七八糟的东西，也是会作为正常的声明解析，如果发现变量值是不合法的，例如上面背景色显然不能是 20px，则使用背景色的缺省值，也就是默认值代替</em></p>
+<h4 id="CSS变量的空格尾随特性"><a href="#CSS变量的空格尾随特性" class="headerlink" title="CSS变量的空格尾随特性"></a>CSS变量的空格尾随特性</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">--size</span>: <span class="number">20</span>;   </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="built_in">var</span>(--size)<span class="built_in">px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 等同于 font-size:20 px */</span></span><br></pre></td></tr></table></figure>
+<p>如果想使用一个数值来贯穿全场-- 推荐使用 <strong>CSS3</strong> <code>calc()</code>计算：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">--size</span>: <span class="number">20</span>;   </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="built_in">calc</span>(var(--size) * <span class="number">1px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="CSS变量的相互传递特性"><a href="#CSS变量的相互传递特性" class="headerlink" title="CSS变量的相互传递特性"></a>CSS变量的相互传递特性</h4><p>就是说，我们在CSS变量定义的时候可以直接引入其他变量给自己使用，例如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">--green</span>: <span class="number">#4CAF50</span>;   </span><br><span class="line">  <span class="attribute">--backgroundColor</span>: <span class="built_in">var</span>(--green);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者更复杂的使用CSS3 calc()计算，例如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">--columns</span>: <span class="number">4</span>;</span><br><span class="line">  <span class="attribute">--margins</span>: <span class="built_in">calc</span>(24px / var(--columns));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于复杂布局，CSS变量的这种相互传递和直接引用特性可以简化我们的代码和实现成本，尤其和动态布局在一起的时候，无论是CSS的响应式或者是JS驱动的布局变化。</p>
+<h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><p>CSS 变量的作用域自上而下，但自下而上引用不会报错警告，只是找不到变量声明而不解析，输出纯字符串。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-pseudo">:root</span>&#123;</span></span><br><span class="line"><span class="undefined">  --red: red;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.wrap</span>&#123;</span></span><br><span class="line"><span class="undefined">  --white: white;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">background-color</span>: <span class="selector-tag">var</span>(<span class="selector-tag">--red</span>, <span class="selector-id">#f90</span>);</span></span><br><span class="line"><span class="css">  <span class="comment">/* 自下而上引用 */</span></span></span><br><span class="line"><span class="css">  <span class="selector-tag">border</span>: 3<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">var</span>(<span class="selector-tag">--blue</span>);<span class="comment">/* 未声明，不起作用 */</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.wrap</span> <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="undefined">  --blue: blue;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">color</span>: <span class="selector-tag">var</span>(<span class="selector-tag">--white</span>, <span class="selector-id">#ccc</span>);</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="comment">/* 兄弟之间引用 */</span></span></span><br><span class="line"><span class="css"><span class="selector-class">.wrap2</span>&#123;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">background-color</span>: <span class="selector-tag">var</span>(<span class="selector-tag">--white</span>); <span class="comment">/* 未声明，不起作用 */</span></span></span><br><span class="line"><span class="undefined">  color: var(--red);</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    我是一行逍遥的文字。</span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap2"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    我是第二行同样逍遥的文字。</span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>作用域的出现可以避免变量污染，在我看来，使用起 CSS 变量来很有编程的感觉。</p>
 <h3 id="兼容"><a href="#兼容" class="headerlink" title="兼容"></a>兼容</h3><ul>
 <li>chrome <strong>49+</strong></li>
 <li>firefox <strong>49+</strong></li>
@@ -391,6 +407,7 @@
 <li>iOS safari <strong>9.3+</strong></li>
 <li>ie <strong>不支持</strong></li>
 </ul>
+<p><em>PS：读大神们的文章，禁不住要问为什么看似简单的一个属性，他们却可以探究的如此之深？但一般程序员如我这般只知概念与简单用法就会就此收手。我想这就是大神和我们这些一般程序员的区别----对于未知的追求和迫不及待的挖掘。所以，花费时间，探求挖掘，我们学习的方向。</em></p>
 
       
     </div>
@@ -408,7 +425,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css3-var/" <i class="fa fa-tag"></i> css3 var</a>
+            <a href="/tags/CSS3-var/" <i class="fa fa-tag"></i> CSS3 var</a>
           
         </div>
       
@@ -430,6 +447,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/22/css3-methods-calc/" rel="prev" title="CSS3 计算函数 calc()">
+                CSS3 计算函数 calc() <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -512,7 +533,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -523,7 +544,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -534,7 +555,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -567,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#root"><span class="nav-number">1.</span> <span class="nav-text">:root</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义属性"><span class="nav-number">2.</span> <span class="nav-text">自定义属性 (--*)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-函数"><span class="nav-number">3.</span> <span class="nav-text">var() 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误使用"><span class="nav-number">4.</span> <span class="nav-text">错误使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容"><span class="nav-number">5.</span> <span class="nav-text">兼容</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#root"><span class="nav-number">1.</span> <span class="nav-text">:root</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义属性"><span class="nav-number">2.</span> <span class="nav-text">自定义属性 (--*)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-函数"><span class="nav-number">3.</span> <span class="nav-text">var() 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性"><span class="nav-number">4.</span> <span class="nav-text">特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#错误使用"><span class="nav-number">4.1.</span> <span class="nav-text">错误使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS-属性名不可以走变量"><span class="nav-number">4.2.</span> <span class="nav-text">CSS 属性名不可以走变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS-不支持同时多个声明"><span class="nav-number">4.3.</span> <span class="nav-text">CSS 不支持同时多个声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS-变量不合法的缺省特性"><span class="nav-number">4.4.</span> <span class="nav-text">CSS 变量不合法的缺省特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS变量的空格尾随特性"><span class="nav-number">4.5.</span> <span class="nav-text">CSS变量的空格尾随特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS变量的相互传递特性"><span class="nav-number">4.6.</span> <span class="nav-text">CSS变量的相互传递特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作用域"><span class="nav-number">4.7.</span> <span class="nav-text">作用域</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容"><span class="nav-number">5.</span> <span class="nav-text">兼容</span></a></li></ol></div>
             
 
           </div>
