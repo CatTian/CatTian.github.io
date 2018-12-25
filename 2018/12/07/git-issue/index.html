@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="git常见操作和常见错误！错误提示：fatal: remote origin already exists.如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git 提示出错信息：fatal: remote origin already exists.  解决办法如下：  1、先输入$ git re">
+<meta name="description" content="git常见操作和常见错误！错误提示：fatal: remote origin already exists.如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 常见问题与常用操作">
 <meta property="og:url" content="https://felischaus.com/blog/2018/12/07/git-issue/index.html">
 <meta property="og:site_name" content="ECHO的薄荷塘">
-<meta property="og:description" content="git常见操作和常见错误！错误提示：fatal: remote origin already exists.如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git 提示出错信息：fatal: remote origin already exists.  解决办法如下：  1、先输入$ git re">
+<meta property="og:description" content="git常见操作和常见错误！错误提示：fatal: remote origin already exists.如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-25T07:19:22.000Z">
+<meta property="og:updated_time" content="2018-12-25T08:36:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 常见问题与常用操作">
-<meta name="twitter:description" content="git常见操作和常见错误！错误提示：fatal: remote origin already exists.如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git 提示出错信息：fatal: remote origin already exists.  解决办法如下：  1、先输入$ git re">
+<meta name="twitter:description" content="git常见操作和常见错误！错误提示：fatal: remote origin already exists.如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git">
 
 
 
@@ -344,23 +344,11 @@
 
       
         <h3 id="git常见操作和常见错误！错误提示：fatal-remote-origin-already-exists"><a href="#git常见操作和常见错误！错误提示：fatal-remote-origin-already-exists" class="headerlink" title="git常见操作和常见错误！错误提示：fatal: remote origin already exists."></a>git常见操作和常见错误！错误提示：fatal: remote origin already exists.</h3><p>如果输入$ git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:djqiang（github帐号名）/gitdemo（项目名）.git</p>
-<pre><code>提示出错信息：fatal: remote origin already exists.
-
-解决办法如下：
-
-1、先输入$ git remote rm origin
-
-2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！
-
-3、如果输入$ git remote rm origin 还是报错的话，error: Could not remove config section &apos;remote.origin&apos;. 我们需要修改gitconfig文件的内容
-
-4、cd .git 里，
-
-5、找到一个名为.gitconfig的文件，打开它把里面的[remote &quot;origin&quot;]那一行删掉就好了！
-</code></pre><h3 id="git向线上仓库提交：-git-push-origin-master-提示错误信息：-rejected-master-gt-master-fetch-first"><a href="#git向线上仓库提交：-git-push-origin-master-提示错误信息：-rejected-master-gt-master-fetch-first" class="headerlink" title="git向线上仓库提交：$git push origin master 提示错误信息： ! [rejected]        master -&gt; master (fetch first)"></a>git向线上仓库提交：$git push origin master 提示错误信息： ! [rejected]        master -&gt; master (fetch first)</h3><p>可能的原因是：1.没有抓取线上的更新，2. 线上有的文件本地没有，比如README.md文件</p>
-<p>执行:</p>
-<pre><code>$ git pull origin master
-</code></pre><p>这句话是拉取线上仓库并合并到本地</p>
+<a id="more"></a>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">提示出错信息：fata<span class="variable">l:</span> remote origin already <span class="built_in">exists</span>.</span><br><span class="line"></span><br><span class="line">解决办法如下：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>、先输入$ git remote rm origin</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、再输入$ git remote <span class="built_in">add</span> origin git@github.<span class="keyword">com</span>:djqiang/gitdemo.git 就不会报错了！</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>、如果输入$ git remote rm origin 还是报错的话，error: Could not <span class="built_in">remove</span> config section <span class="string">'remote.origin'</span>. 我们需要修改gitconfig文件的内容</span><br><span class="line"></span><br><span class="line"><span class="number">4</span>、<span class="keyword">cd</span> .git 里，</span><br><span class="line"></span><br><span class="line"><span class="number">5</span>、找到一个名为.gitconfig的文件，打开它把里面的[remote <span class="string">"origin"</span>]那一行删掉就好了！</span><br></pre></td></tr></table></figure>
+<h3 id="git向线上仓库提交：-git-push-origin-master-提示错误信息：-rejected-master-gt-master-fetch-first"><a href="#git向线上仓库提交：-git-push-origin-master-提示错误信息：-rejected-master-gt-master-fetch-first" class="headerlink" title="git向线上仓库提交：$git push origin master 提示错误信息： ! [rejected]        master -&gt; master (fetch first)"></a>git向线上仓库提交：$git push origin master 提示错误信息： ! [rejected]        master -&gt; master (fetch first)</h3><p>可能的原因是：1.没有抓取线上的更新，2. 线上有的文件本地没有，比如README.md文件</p>
+<p>执行:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure></p>
+<p>这句话是拉取线上仓库并合并到本地</p>
 <h3 id="如果输入-git-push-origin-master-提示出错信息：-rejected-master-gt-master-non-fast-forward"><a href="#如果输入-git-push-origin-master-提示出错信息：-rejected-master-gt-master-non-fast-forward" class="headerlink" title="如果输入$ git push origin master 提示出错信息：! [rejected]        master -&gt; master (non-fast-forward)"></a>如果输入$ git push origin master 提示出错信息：! [rejected]        master -&gt; master (non-fast-forward)</h3><p>我自己出现这个的情景是，clone了一个教学课件的准备代码，打算直接上传到自己的git上开始项目的，就在push到新建的仓库时出现了这个情况，一只提示我git pull 拉取更新，然而我已经拉取过了。。。。查了很多解决方法，最后在 stackoverflow 上找到个类似的问题，就是强制覆盖原来的文件，上传仓库。虽然暴力，但确实是目前的可行的方法。因为新建的仓库除了一个空的README.md文件没有其他东西。但是如果是原有仓库呢，出现这个问题怎么办，我学要的还是能够熟练的掌握git的原理和使用方法。下面是解决办法来自：<a href="https://stackoverflow.com/questions/9661059/git-pull-rebase-upstream-git-push-origin-rejects-non-fast-forward" target="_blank" rel="noopener">stackoverflow</a></p>
 <pre><code>$ git push --force origin master
 </code></pre>
@@ -499,7 +487,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -510,7 +498,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
