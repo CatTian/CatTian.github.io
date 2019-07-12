@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/12/07/git-issue/">
+    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/12/28/js-delayed-load/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ECHO">
@@ -284,7 +284,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/07/git-issue/" itemprop="url">git 常见问题与常用操作</a></h1>
+                <a class="post-title-link" href="/2018/12/28/js-delayed-load/" itemprop="url">js 延迟加载</a></h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-06T16:14:44Z">
-                2018-12-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-27T16:13:47Z">
+                2018-12-27
               </time>
             
 
@@ -314,7 +314,7 @@
 
           
           
-             <span id="/2018/12/07/git-issue/" class="leancloud_visitors" data-flag-title="git 常见问题与常用操作">
+             <span id="/2018/12/28/js-delayed-load/" class="leancloud_visitors" data-flag-title="js 延迟加载">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -346,26 +346,150 @@
 
       
         
-          <p>接触 git 挺久了，很多功能却没怎么用过，git 的终端命令也是一知半解，哎，因为公司用的一直是 svn ，而 git 也只是常用于个人博客和学习资料的更新，很少用到项目和多人协作，所以慢慢收集一些自己目前能遇到的 git 问题，积累起来的话慢慢也就熟练的。</p>
-<h3 id="git-基础操作"><a href="#git-基础操作" class="headerlink" title="git 基础操作"></a>git 基础操作</h3><p><strong>本地仓添加 git 管理</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 在文件根目录执行</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure></p>
-<p>会在文件根目录添加 .git 文件夹</p>
-<p><strong>克隆线上仓库</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone &lt;url：仓库地址&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>文件对比</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff 尚未暂存的文件更新了哪些部分  (--cached) 已经暂存起来的文件和上次提交时的快照之间的差异</span><br></pre></td></tr></table></figure></p>
+          <h3 id="什么是-js-的延迟加载"><a href="#什么是-js-的延迟加载" class="headerlink" title="什么是 js 的延迟加载"></a>什么是 js 的延迟加载</h3><p>js 的延迟加载就是等页面加载完毕后再加载 js 文件（这里尤指外部 jsvascript 文件）。采用延迟加载的好处就是有助于提升页面的加载速度。</p>
 <hr>
-<p><strong>拉取线上仓库</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure></p>
-<p><strong>暂存修改</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 暂存全部 </span><br><span class="line">$ git <span class="built_in">add</span> .</span><br><span class="line">// 暂存指定文件</span><br><span class="line">$ gti <span class="built_in">add</span> &lt;指定文件名&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>提交暂存</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 会直接进入编辑状态</span><br><span class="line">$ git ci(这里是本地设置的缩写，原为 commit) </span><br><span class="line">// 需要暂存才能提交，直接写备注，不会进入编辑状态， 推荐</span><br><span class="line">$ git commit -<span class="keyword">m</span> <span class="string">'msg'</span> </span><br><span class="line">// 对于已经跟踪过的文件，可以跳过暂存直接提交</span><br><span class="line">$ git commit -<span class="keyword">a</span> -<span class="keyword">m</span> <span class="string">'msg'</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>退出 commit 编辑状态</strong></p>
-<p>首先按 <code>esc</code> 键，接着调整键盘为英文大写状态，连按两次 <code>Z</code>方可退出编辑状态。</p>
-<p>⚠️ 在这里 按 <code>:qw</code> 或者 <code>:q</code> 是会报错的… 原因目前不知</p>
-<p><strong>推送到线上仓库</strong></p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
-<p><strong>查看提交历史</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<h3 id="git常见操作和常见错误！错误提示：fatal-remote-origin-already-exists"><a href="#git常见操作和常见错误！错误提示：fatal-remote-origin-already-exists" class="headerlink" title="git常见操作和常见错误！错误提示：fatal: remote origin already exists."></a>git常见操作和常见错误！错误提示：fatal: remote origin already exists.</h3><p>如果输入$ git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:djqiang（github帐号名）/gitdemo（项目名）.git</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/12/07/git-issue/#more" rel="contents">
+            <a class="btn" href="/2018/12/28/js-delayed-load/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/12/25/webpack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ECHO">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ECHO的薄荷塘">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/25/webpack/" itemprop="url">webpack</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-25T10:07:42Z">
+                2018-12-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/25/webpack/" class="leancloud_visitors" data-flag-title="webpack">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>捣鼓了几天 <strong>webpack</strong> 后终于有点收获了，这里记录一下觉得比较重要的东西。</p>
+<h3 id="关于webpack-的安装"><a href="#关于webpack-的安装" class="headerlink" title="关于webpack 的安装"></a>关于webpack 的安装</h3><ol>
+<li>需要现在全局安装 webpack 才能在命令行中使用 webpack 命令</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g webpack</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/25/webpack/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1672,164 +1796,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/09/20/equality-comparison/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ECHO">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ECHO的薄荷塘">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/20/equality-comparison/" itemprop="url">（严格）相等运算符</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T10:51:12Z">
-                2018-09-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/09/20/equality-comparison/" class="leancloud_visitors" data-flag-title="（严格）相等运算符">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>标准相等操作符(<code>==</code> and <code>!=</code>) 当两个操作数类型不相等时，会在比较前尝试将其转换为相同类型。</strong>  </p>
-<p><strong>严格相等操作符 (<code>===</code> and <code>!==</code>) 尝试对两个相同操作数进行相等比较，如果它们的类型不相等，那么永远会返回false。</strong>  </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/20/equality-comparison/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1880,7 +1846,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1902,7 +1868,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

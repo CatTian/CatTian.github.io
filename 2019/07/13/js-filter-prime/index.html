@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="接触 git 挺久了，很多功能却没怎么用过，git 的终端命令也是一知半解，哎，因为公司用的一直是 svn ，而 git 也只是常用于个人博客和学习资料的更新，很少用到项目和多人协作，所以慢慢收集一些自己目前能遇到的 git 问题，积累起来的话慢慢也就熟练的。 git 基础操作本地仓添加 git 管理12// 在文件根目录执行$ git init 会在文件根目录添加 .git 文件夹 克隆线上仓库">
-<meta name="keywords" content="git">
+<meta name="description" content="质数的问题最近在看基础知识点，遇到一个小练习，使用 filter来完成1-100 里质数的筛选。 那什么是质数呢？经过百度后： 质数（prime number）又称素数，有无限个。 质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。 这里就可以排除掉 1了。 现在还剩下 2-100这99个数。 比较传统的方法就是让每个数字从1开始除到它本身，若中间没有可以整除的则是质数，否则是合数。">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git 常见问题与常用操作">
-<meta property="og:url" content="https://felischaus.com/blog/2018/12/07/git-issue/index.html">
+<meta property="og:title" content="js 筛选质数">
+<meta property="og:url" content="https://felischaus.com/blog/2019/07/13/js-filter-prime/index.html">
 <meta property="og:site_name" content="ECHO的薄荷塘">
-<meta property="og:description" content="接触 git 挺久了，很多功能却没怎么用过，git 的终端命令也是一知半解，哎，因为公司用的一直是 svn ，而 git 也只是常用于个人博客和学习资料的更新，很少用到项目和多人协作，所以慢慢收集一些自己目前能遇到的 git 问题，积累起来的话慢慢也就熟练的。 git 基础操作本地仓添加 git 管理12// 在文件根目录执行$ git init 会在文件根目录添加 .git 文件夹 克隆线上仓库">
+<meta property="og:description" content="质数的问题最近在看基础知识点，遇到一个小练习，使用 filter来完成1-100 里质数的筛选。 那什么是质数呢？经过百度后： 质数（prime number）又称素数，有无限个。 质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。 这里就可以排除掉 1了。 现在还剩下 2-100这99个数。 比较传统的方法就是让每个数字从1开始除到它本身，若中间没有可以整除的则是质数，否则是合数。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-31T03:25:16.000Z">
+<meta property="og:updated_time" content="2019-07-12T09:09:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git 常见问题与常用操作">
-<meta name="twitter:description" content="接触 git 挺久了，很多功能却没怎么用过，git 的终端命令也是一知半解，哎，因为公司用的一直是 svn ，而 git 也只是常用于个人博客和学习资料的更新，很少用到项目和多人协作，所以慢慢收集一些自己目前能遇到的 git 问题，积累起来的话慢慢也就熟练的。 git 基础操作本地仓添加 git 管理12// 在文件根目录执行$ git init 会在文件根目录添加 .git 文件夹 克隆线上仓库">
+<meta name="twitter:title" content="js 筛选质数">
+<meta name="twitter:description" content="质数的问题最近在看基础知识点，遇到一个小练习，使用 filter来完成1-100 里质数的筛选。 那什么是质数呢？经过百度后： 质数（prime number）又称素数，有无限个。 质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。 这里就可以排除掉 1了。 现在还剩下 2-100这99个数。 比较传统的方法就是让每个数字从1开始除到它本身，若中间没有可以整除的则是质数，否则是合数。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://felischaus.com/blog/2018/12/07/git-issue/"/>
+  <link rel="canonical" href="https://felischaus.com/blog/2019/07/13/js-filter-prime/"/>
 
 
 
 
 
-  <title>git 常见问题与常用操作 | ECHO的薄荷塘</title>
+  <title>js 筛选质数 | ECHO的薄荷塘</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2018/12/07/git-issue/">
+    <link itemprop="mainEntityOfPage" href="https://felischaus.com/blog/2019/07/13/js-filter-prime/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ECHO">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git 常见问题与常用操作</h1>
+          <h1 class="post-title" itemprop="name headline">js 筛选质数</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-07T00:14:44+08:00">
-                2018-12-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-13T00:35:58+08:00">
+                2019-07-12
               </time>
             
 
@@ -312,7 +312,7 @@
 
           
           
-             <span id="/2018/12/07/git-issue/" class="leancloud_visitors" data-flag-title="git 常见问题与常用操作">
+             <span id="/2019/07/13/js-filter-prime/" class="leancloud_visitors" data-flag-title="js 筛选质数">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -343,35 +343,21 @@
       
 
       
-        <p>接触 git 挺久了，很多功能却没怎么用过，git 的终端命令也是一知半解，哎，因为公司用的一直是 svn ，而 git 也只是常用于个人博客和学习资料的更新，很少用到项目和多人协作，所以慢慢收集一些自己目前能遇到的 git 问题，积累起来的话慢慢也就熟练的。</p>
-<h3 id="git-基础操作"><a href="#git-基础操作" class="headerlink" title="git 基础操作"></a>git 基础操作</h3><p><strong>本地仓添加 git 管理</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 在文件根目录执行</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure></p>
-<p>会在文件根目录添加 .git 文件夹</p>
-<p><strong>克隆线上仓库</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone &lt;url：仓库地址&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>文件对比</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff 尚未暂存的文件更新了哪些部分  (--cached) 已经暂存起来的文件和上次提交时的快照之间的差异</span><br></pre></td></tr></table></figure></p>
-<hr>
-<p><strong>拉取线上仓库</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure></p>
-<p><strong>暂存修改</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 暂存全部 </span><br><span class="line">$ git <span class="built_in">add</span> .</span><br><span class="line">// 暂存指定文件</span><br><span class="line">$ gti <span class="built_in">add</span> &lt;指定文件名&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>提交暂存</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 会直接进入编辑状态</span><br><span class="line">$ git ci(这里是本地设置的缩写，原为 commit) </span><br><span class="line">// 需要暂存才能提交，直接写备注，不会进入编辑状态， 推荐</span><br><span class="line">$ git commit -<span class="keyword">m</span> <span class="string">'msg'</span> </span><br><span class="line">// 对于已经跟踪过的文件，可以跳过暂存直接提交</span><br><span class="line">$ git commit -<span class="keyword">a</span> -<span class="keyword">m</span> <span class="string">'msg'</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>退出 commit 编辑状态</strong></p>
-<p>首先按 <code>esc</code> 键，接着调整键盘为英文大写状态，连按两次 <code>Z</code>方可退出编辑状态。</p>
-<p>⚠️ 在这里 按 <code>:qw</code> 或者 <code>:q</code> 是会报错的… 原因目前不知</p>
-<p><strong>推送到线上仓库</strong></p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
-<p><strong>查看提交历史</strong><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<h3 id="git常见操作和常见错误！错误提示：fatal-remote-origin-already-exists"><a href="#git常见操作和常见错误！错误提示：fatal-remote-origin-already-exists" class="headerlink" title="git常见操作和常见错误！错误提示：fatal: remote origin already exists."></a>git常见操作和常见错误！错误提示：fatal: remote origin already exists.</h3><p>如果输入$ git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:djqiang（github帐号名）/gitdemo（项目名）.git</p>
-<a id="more"></a>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">提示出错信息：fata<span class="variable">l:</span> remote origin already <span class="built_in">exists</span>.</span><br><span class="line"></span><br><span class="line">解决办法如下：</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>、先输入$ git remote rm origin</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、再输入$ git remote <span class="built_in">add</span> origin git@github.<span class="keyword">com</span>:djqiang/gitdemo.git 就不会报错了！</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>、如果输入$ git remote rm origin 还是报错的话，error: Could not <span class="built_in">remove</span> config section <span class="string">'remote.origin'</span>. 我们需要修改gitconfig文件的内容</span><br><span class="line"></span><br><span class="line"><span class="number">4</span>、<span class="keyword">cd</span> .git 里，</span><br><span class="line"></span><br><span class="line"><span class="number">5</span>、找到一个名为.gitconfig的文件，打开它把里面的[remote <span class="string">"origin"</span>]那一行删掉就好了！</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="git向线上仓库提交：-git-push-origin-master-提示错误信息：-rejected-master-gt-master-fetch-first"><a href="#git向线上仓库提交：-git-push-origin-master-提示错误信息：-rejected-master-gt-master-fetch-first" class="headerlink" title="git向线上仓库提交：$git push origin master 提示错误信息： ! [rejected] master -&gt; master (fetch first)"></a>git向线上仓库提交：$git push origin master 提示错误信息： ! [rejected] master -&gt; master (fetch first)</h3><p>可能的原因是：1.没有抓取线上的更新，2. 线上有的文件本地没有，比如README.md文件</p>
-<p>执行:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure></p>
-<p>这句话是拉取线上仓库并合并到本地</p>
-<hr>
-<h3 id="如果输入-git-push-origin-master-提示出错信息：-rejected-master-gt-master-non-fast-forward"><a href="#如果输入-git-push-origin-master-提示出错信息：-rejected-master-gt-master-non-fast-forward" class="headerlink" title="如果输入$ git push origin master 提示出错信息：! [rejected] master -&gt; master (non-fast-forward)"></a>如果输入$ git push origin master 提示出错信息：! [rejected] master -&gt; master (non-fast-forward)</h3><p>我自己出现这个的情景是，clone了一个教学课件的准备代码，打算直接上传到自己的git上开始项目的，就在push到新建的仓库时出现了这个情况，一只提示我git pull 拉取更新，然而我已经拉取过了。。。。查了很多解决方法，最后在 stackoverflow 上找到个类似的问题，就是强制覆盖原来的文件，上传仓库。虽然暴力，但确实是目前的可行的方法。因为新建的仓库除了一个空的README.md文件没有其他东西。但是如果是原有仓库呢，出现这个问题怎么办，我学要的还是能够熟练的掌握git的原理和使用方法。下面是解决办法来自：<a href="https://stackoverflow.com/questions/9661059/git-pull-rebase-upstream-git-push-origin-rejects-non-fast-forward" target="_blank" rel="noopener">stackoverflow</a><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push --force origin master</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h3 id="在-github-中预览-html-文件"><a href="#在-github-中预览-html-文件" class="headerlink" title="在 github 中预览 html 文件"></a>在 github 中预览 html 文件</h3><p>在想要预览的 “<strong>仓库</strong>” 的 <strong>tab</strong> 栏里找到 <strong>Settings</strong> 选项，在 <strong>Setting</strong> 页面下拉找到 <strong>GitHub Pages</strong> 中的 <strong>Source</strong> 模块中选择要预览的<strong>分支</strong>或者<strong>master</strong>，然后复制生成的网址，想要预览的文件就在该网址的基础上添加文件位置索引就好了，很简单！</p>
-<p>github 里建的 blog 带图很不方便，先这么着吧。</p>
+        <h2 id="质数的问题"><a href="#质数的问题" class="headerlink" title="质数的问题"></a>质数的问题</h2><p>最近在看基础知识点，遇到一个小练习，使用 <code>filter</code>来完成<code>1-100</code> 里质数的筛选。</p>
+<h3 id="那什么是质数呢？"><a href="#那什么是质数呢？" class="headerlink" title="那什么是质数呢？"></a>那什么是质数呢？</h3><p>经过百度后：</p>
+<pre><code>质数（prime number）又称素数，有无限个。
+质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。
+</code></pre><p>这里就可以排除掉 <code>1</code>了。</p>
+<p>现在还剩下 <code>2-100</code>这99个数。</p>
+<p>比较传统的方法就是让每个数字从1开始除到它本身，若中间没有可以整除的则是<code>质数</code>，否则是<code>合数</code>。但是这个做的话会很耗时间。因为如果是<code>素数</code>的话循环要从<code>2-它本身</code>，数字小当然看不出来，若是十几万的数呢，性能方面很耗啊。</p>
+<h3 id="埃拉托色尼素数筛选法"><a href="#埃拉托色尼素数筛选法" class="headerlink" title="埃拉托色尼素数筛选法"></a>埃拉托色尼素数筛选法</h3><p>这里有个很巧妙的的素数筛选法，不需要<code>素数</code>循环从<code>2-它本身</code>才判断出来是<code>素数</code>：</p>
+<pre><code>埃拉托色尼素数筛选法可以很快速的计算出1到N之间的所有素数。将n开根号，即N^0.5，去掉2到N^0.5中所有素数的倍数，剩下的数便都是素数了。
 
+简单总结一下就是：
+只要小于或等于根号N的数（1除外）不能整除N，则N一定是素数；
+反过来说就是只要小于或等于根号N的数（1除外）能整除N，则N一定是合数。
+</code></pre><p>代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//代码复制可用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 筛选质数（素数）</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_primes</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arr.filter(<span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 直接筛选出2，3</span></span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n &gt; <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 排除掉偶数和能被3整除的</span></span><br><span class="line">    <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span> || n % <span class="number">3</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 埃拉托色尼素数筛选法:</span></span><br><span class="line">    <span class="comment">// 只要小于或等于根号N的数（1除外）不能整除N，则N一定是素数；</span></span><br><span class="line">    <span class="comment">// 反过来说就是只要小于或等于根号N的数（1除外）能整除N，则N一定是合数    </span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">Math</span>.sqrt(n); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % i === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试:</span></span><br><span class="line"><span class="keyword">var</span></span><br><span class="line">    x,</span><br><span class="line">    r,</span><br><span class="line">    arr = [];</span><br><span class="line"><span class="keyword">for</span> (x = <span class="number">1</span>; x &lt; <span class="number">100</span>; x++) &#123;</span><br><span class="line">    arr.push(x);</span><br><span class="line">&#125;</span><br><span class="line">r = get_primes(arr);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (r.toString() === [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>, <span class="number">41</span>, <span class="number">43</span>, <span class="number">47</span>, <span class="number">53</span>, <span class="number">59</span>, <span class="number">61</span>, <span class="number">67</span>, <span class="number">71</span>, <span class="number">73</span>, <span class="number">79</span>, <span class="number">83</span>, <span class="number">89</span>,<span class="number">97</span>].toString()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'测试通过!'</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'测试失败: '</span> + r.toString());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -388,7 +374,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" <i class="fa fa-tag"></i> git</a>
+            <a href="/tags/javascript/" <i class="fa fa-tag"></i> javascript</a>
           
         </div>
       
@@ -401,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/22/css3-methods-calc/" rel="next" title="CSS3 计算函数 calc()">
-                <i class="fa fa-chevron-left"></i> CSS3 计算函数 calc()
+              <a href="/2019/07/13/filter-prime/" rel="next" title="filter-prime">
+                <i class="fa fa-chevron-left"></i> filter-prime
               </a>
             
           </div>
@@ -410,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/25/webpack/" rel="prev" title="webpack">
-                webpack <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -496,7 +478,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -518,7 +500,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -551,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-基础操作"><span class="nav-number">1.</span> <span class="nav-text">git 基础操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git常见操作和常见错误！错误提示：fatal-remote-origin-already-exists"><span class="nav-number">2.</span> <span class="nav-text">git常见操作和常见错误！错误提示：fatal: remote origin already exists.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git向线上仓库提交：-git-push-origin-master-提示错误信息：-rejected-master-gt-master-fetch-first"><span class="nav-number">3.</span> <span class="nav-text">git向线上仓库提交：$git push origin master 提示错误信息： ! [rejected] master -&gt; master (fetch first)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如果输入-git-push-origin-master-提示出错信息：-rejected-master-gt-master-non-fast-forward"><span class="nav-number">4.</span> <span class="nav-text">如果输入$ git push origin master 提示出错信息：! [rejected] master -&gt; master (non-fast-forward)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-github-中预览-html-文件"><span class="nav-number">5.</span> <span class="nav-text">在 github 中预览 html 文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#质数的问题"><span class="nav-number">1.</span> <span class="nav-text">质数的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#那什么是质数呢？"><span class="nav-number">1.1.</span> <span class="nav-text">那什么是质数呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#埃拉托色尼素数筛选法"><span class="nav-number">1.2.</span> <span class="nav-text">埃拉托色尼素数筛选法</span></a></li></ol></li></ol></div>
             
 
           </div>
